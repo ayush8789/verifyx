@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  backend:
+    build: ../backend
+    container_name: verifyx_backend
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../backend:/app
+  frontend:
+    build: ../frontend
+    container_name: verifyx_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:4000
+    volumes:
+      - ../frontend:/app

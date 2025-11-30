@@ -1,0 +1,7 @@
+node_modules/
+build/
+.env
+backend/verifyx.db
+.DS_Store
+.vscode/
+npm-debug.log
